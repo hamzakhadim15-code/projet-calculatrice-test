@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const historyBox = document.querySelector(".history");
     const historyToggleBtn = document.getElementById("historyToggle");
 
-    // نخبيو التاريخ فالأول
+     
     historyBox.style.display = "none";
 
-    // أزرار الأرقام والعمليات
+    
     window.appendValue = function(value) {
         display.value += value;
     }
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // حفظ العمليات فـ localStorage
+    
     function saveToHistory(operation) {
         let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
 
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         renderHistory();
     }
 
-    // عرض التاريخ
+    
     function renderHistory() {
         let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
         historyList.innerHTML = "";
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // زر إظهار / إخفاء التاريخ
+    
     historyToggleBtn.addEventListener("click", function () {
         if (historyBox.style.display === "none") {
             historyBox.style.display = "block";
